@@ -1,0 +1,2 @@
+Image is 908x497x3
+Decode text is Bonsoir

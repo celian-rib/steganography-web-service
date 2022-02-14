@@ -1,0 +1,7 @@
+stages:
+  - test
+
+test-code-job1:
+  stage: test
+  script:
+    - test.sh
