@@ -1,5 +1,11 @@
 stages:
+  - compile
   - test
+
+compile-make:
+  stage: compile
+  scripts:
+    make
 
 test:
   stage: test
