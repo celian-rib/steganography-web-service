@@ -5,7 +5,7 @@ stages:
 compile-make:
   stage: compile
   scripts:
-    make
+    - make
 
 test:
   stage: test
