@@ -2,9 +2,10 @@ stages:
   - compile
   - test
 
-compile-make:
+submodule-make:
   stage: compile
   script:
+    - git submodule update
     - make
 
 test:
