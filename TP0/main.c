@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #define LOADBMP_IMPLEMENTATION
 #include "loadbmp.h"
@@ -194,10 +195,21 @@ static int decode(void) {
 
 int main(int argc, char **argv) {
 
-  int rv;
- 
-  // encode();
-  decode();
+  if(argc <= 1) {
+    printf("Nor args\n");
+    return 1;
+  }
+
+  if(!strcmp(argv[1], "-encode")) {
+    printf("Encode\n");
+    encode();
+  } else if(!strcmp(argv[1], "-decode")) {
+    printf("Decode\n");
+    decode();
+  } else {
+    printf("Unkown args\n");
+    return 1;
+  }
 
   return 0;
 }
