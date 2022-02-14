@@ -1,3 +1,5 @@
+#!/bin/bash
+
 TESTSTR="Bonsoir"
 
 echo "Starting test"
