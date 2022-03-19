@@ -1,0 +1,14 @@
+version: "3.3"
+services:
+  frontend:
+    build: .
+    ports:
+      - "9090:9090"
+  backend:
+    image: nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./www/:/usr/share/nginx/html:ro
+  redis:
+    image: "redis:alpine"
