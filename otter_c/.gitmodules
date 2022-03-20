@@ -1,3 +1,0 @@
-[submodule "libspng"]
-	path = libspng
-	url = git@github.com:randy408/libspng.git

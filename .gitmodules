@@ -1,0 +1,3 @@
+[submodule "backend/steganography/libspng"]
+	path = backend/steganography/libspng
+	url = git@github.com:randy408/libspng.git
