@@ -6,6 +6,7 @@ submodule-make:
   stage: compile
   script:
     - git submodule update
+    - cd backend/steganography
     - make
 
 test:
