@@ -1,13 +1,13 @@
-# Generated artifacts #EF656AF on runner #IUT-76678980
+`docker-compose build`
 
-## binaries
-binaries for different architectures may be found on the ````binaries```` subfolder
+`docker-compose up`
 
-## http wrapper
-Http wrapper can be found in the ````wrapper```` subfolder
+`docker-compose down`
 
-## Testing
-To run the application, please run ````python3 wrapper/wrapper.py```` and then encode image with the command ````curl  -F "input=@PATH-TO-FILE.bmp" -F "text=secret" http://localhost/api/encode````
+Fontend :
 
-to serve the web ui, run ````python3 wrapper/wrapper.py --test````  and then open http://localhost:9090
+http://localhost:8888/
 
+Backend
+
+http://localhost:7777/

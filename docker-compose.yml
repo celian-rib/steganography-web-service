@@ -1,10 +1,9 @@
-version: "3.3"
 services:
-  frontend:
-    build: .
-    ports:
-      - "9090:9090"
   backend:
+    build: ./backend
+    ports:
+      - "7777:5000"
+  frontend:
     image: nginx
     ports:
       - "8888:80"
