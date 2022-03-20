@@ -2,7 +2,7 @@ services:
   backend:
     build: ./backend
     ports:
-      - "7777:5000"
+      - "3000:3000"
   frontend:
     image: nginx
     ports:

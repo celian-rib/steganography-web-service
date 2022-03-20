@@ -1,29 +1,11 @@
-# syntax=docker/dockerfile:1
-FROM python:3.7-alpine
-
-WORKDIR /
-
+FROM node
 RUN apk add --no-cache gcc musl-dev linux-headers
-ENV FLASK_APP=wrapper.py
-ENV FLASK_RUN_HOST=0.0.0.0
 
-COPY requirements.txt requirements.txt
+RUN mkdir -p /usr/src/app
+COPY ./ /usr/src/app
 
-RUN pip install -r requirements.txt
+WORKDIR /usr/src/app
 
-COPY . .
-CMD ["python3", "old.py"]
+RUN npm install
 
-
-
-# FROM python:3.7-alpine
-
-# RUN mkdir -p /usr/src/app
-# COPY ./ /usr/src/app
-
-# WORKDIR /usr/src/app
-
-
-# RUN pip install -r requirements.txt
-
-# CMD ["python3", "old.py"]
+CMD ["node", "index.js"]
